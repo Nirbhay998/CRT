@@ -1,0 +1,29 @@
+21.  Multiple Inheritance Example
+
+# Parent class 1
+class Father:
+    def __init__(self):
+        self.father_name = "John"
+        self.father_hobby = "Fishing"
+
+# Parent class 2
+class Mother:
+    def __init__(self):
+        self.mother_name = "Emma"
+        self.mother_hobby = "Gardening"
+
+# Derived class
+class Child(Father, Mother):
+    def __init__(self):
+        Father.__init__(self)
+        Mother.__init__(self)
+        self.child_name = "Alex"
+
+    def show_family(self):
+        print(f"Child's Name: {self.child_name}")
+        print(f"Father's Name: {self.father_name}, Hobby: {self.father_hobby}")
+        print(f"Mother's Name: {self.mother_name}, Hobby: {self.mother_hobby}")
+
+# Example usage
+c = Child()
+c.show_family()
